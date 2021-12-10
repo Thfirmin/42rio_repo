@@ -1,1 +1,0 @@
-Atualization has been active!!!
