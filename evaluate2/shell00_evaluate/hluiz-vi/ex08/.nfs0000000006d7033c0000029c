@@ -1,0 +1,1 @@
+echo "41 string 42 42 file" > 42 && file -C -m 42 && file -i -m 42.mgc
