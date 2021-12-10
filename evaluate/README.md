@@ -1,0 +1,1 @@
+Atualization has been active?
