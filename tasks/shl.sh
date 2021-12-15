@@ -1,0 +1,24 @@
+#!/bin/sh
+cd ~/.ssh/42rio_basecamp/tasks/c03/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33320/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c04/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33328/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c05/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33336/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c06/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33344/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c07/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33352/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c08/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33355/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c09/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33362/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c10/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33370/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c11/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33378/pt_br.subject.pdf
+cd ~/.ssh/42rio_basecamp/tasks/c12/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33385/pt_br.subject.pdf
+wget https://projects.intra.42.fr/uploads/document/document/5563/pt_br.videos.version
+cd ~/.ssh/42rio_basecamp/tasks/c13/resources
+wget https://cdn.intra.42.fr/pdf/pdf/33393/pt_br.subject.pdf

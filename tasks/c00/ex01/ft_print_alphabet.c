@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 20:43:05 by tfirmino          #+#    #+#             */
-/*   Updated: 2021/12/11 20:43:11 by tfirmino         ###   ########.fr       */
+/*   Created: 2021/12/11 20:46:14 by tfirmino          #+#    #+#             */
+/*   Updated: 2021/12/11 20:46:19 by tfirmino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_alphabet(void)
 {
-	write (1, &c, 1);
+	write (1, "abcdefghijklmnopqrstuvwxyz", 26);
 }
