@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 11:39:52 by tfirmino          #+#    #+#             */
-/*   Updated: 2021/12/14 12:11:59 by coder            ###   ########.fr       */
+/*   Created: 2021/12/05 16:23:44 by coder             #+#    #+#             */
+/*   Updated: 2021/12/05 16:37:22 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	if (n >= 0)
-		write (1, "P", 1);
-	else
-		write (1, "N", 1);
-}
+	int	c;
+	int	d;
 
-//int	main(void)
-//{
-//	ft_is_negative(-123);
-//}
+	c = *a;
+	d = *b;
+	*a = c / d;
+	*b = c % d;
+}

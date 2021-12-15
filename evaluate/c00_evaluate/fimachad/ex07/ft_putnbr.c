@@ -1,23 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
+/*   By: fimachad <fimachad@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 11:39:08 by tfirmino          #+#    #+#             */
-/*   Updated: 2021/12/14 11:49:21 by coder            ###   ########.fr       */
+/*   Created: 2021/12/11 04:48:47 by fimachad          #+#    #+#             */
+/*   Updated: 2021/12/11 21:26:42 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-//int	main(void)
-//{
-//	ft_putchar('g');
-//	return (0);
-//}
+void	ft_putnbr(int nb)
+{
+	unsigned int	number;
+
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		number = nb * -1;
+	}
+	else
+	{
+		number = nb;
+	}
+	if (number >= 10)
+	{
+		ft_putnbr(number / 10);
+	}
+	ft_putchar(number % 10 + '0');
+}
+
+int	main(void)
+{
+	ft_putnbr(7777);
+	return (0);
+}

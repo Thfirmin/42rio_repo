@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 20:49:36 by tfirmino          #+#    #+#             */
-/*   Updated: 2021/12/11 20:49:41 by tfirmino         ###   ########.fr       */
+/*   Created: 2021/12/14 11:39:40 by tfirmino          #+#    #+#             */
+/*   Updated: 2021/12/14 12:06:21 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -15,3 +15,8 @@ void	ft_print_numbers(void)
 {
 	write (1, "0123456789", 10);
 }
+
+//int	main(void)
+//{
+//	ft_print_numbers();
+//}
