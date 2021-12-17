@@ -1,9 +1,22 @@
-#include <stdio.h>
-char *ft_strncpy(char *dest, char *src, unsigned int n)
-{
-        unsigned int     x;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/16 22:48:05 by tfirmino          #+#    #+#             */
+/*   Updated: 2021/12/16 22:48:35 by tfirmino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        x = 0;
+//#include <stdio.h>
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int	x;
+
+	x = 0;
 	while ((x < n) && (src[x] != '\0'))
 	{
 		dest[x] = src[x];
@@ -14,11 +27,10 @@ char *ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[x] = '\0';
 		x++;
 	}
-
-        return (dest);
+	return (dest);
 }
 
-int     main(void)
+/*int     main(void)
 {
         int     x;
 	unsigned int	n;
@@ -35,4 +47,4 @@ int     main(void)
         ft_strncpy(dest, src, n);
         printf("src: %s\n", src);
         printf("dest: %s", dest);
-}
+}*/

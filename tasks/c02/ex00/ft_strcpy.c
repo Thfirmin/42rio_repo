@@ -1,5 +1,18 @@
-#include <stdio.h>
-char *ft_strcpy(char *dest, char *src)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/16 22:33:23 by tfirmino          #+#    #+#             */
+/*   Updated: 2021/12/16 22:33:45 by tfirmino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <stdio.h>
+
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	x;
 
@@ -10,14 +23,13 @@ char *ft_strcpy(char *dest, char *src)
 		x++;
 	}
 	*(dest + x) = '\0';
-	
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	x;
-	char	src[] = "ola, mundo";
+	char	src[] = "Ola, mundo!";
 
 	x = 0;
 	while (src[x] != '\0')
@@ -29,4 +41,4 @@ int	main(void)
 	ft_strcpy(dest, src);
 	printf("src: %s\n", src);
 	printf("dest: %s", dest);
-}
+}*/
