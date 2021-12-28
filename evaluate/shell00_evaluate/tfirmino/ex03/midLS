@@ -1,0 +1,2 @@
+#!/bin/sh
+ls -pr --ignore=".*" --format="commas" --sort="time"
