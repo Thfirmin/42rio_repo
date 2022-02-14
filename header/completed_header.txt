@@ -3,9 +3,9 @@
 /*                                                        :::      ::::::::   */
 /*   <archive.format>                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfirmino <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
+/*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: AAAA/MM/DD hh:mm:ss by tfirmino          #+#    #+#             */
-/*   Updated: AAAA/MM/DD hh:mm:ss by tfirmino         ###   ########.fr       */
+/*   Created: AAAA/MM/DD hh:mm:ss by thfirmin          #+#    #+#             */
+/*   Updated: AAAA/MM/DD hh:mm:ss by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
