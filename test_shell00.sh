@@ -50,8 +50,24 @@ git reset --hard HEAD~6
 rm -rf teste.txt" > ex04/teste.sh
 echo "#!/bin/sh
 echo -e ".Dswork \nMyDream \n monday.txt" > .gitignore
-touch " > ex05/teste.sh
-echo "#!/bin/sh" > ex06/teste.sh
-echo "#!/bin/sh" > ex07/teste.sh
-echo "#!/bin/sh" > ex08/teste.sh
+touch .Dswork monday.txt teste
+/bin/sh git_ignore.sh
+rm -rf .gitignore .Dswork monday.txt teste" > ex05/teste.sh
+echo "#!/bin/sh
+cat b" > ex06/teste.sh
+echo "#!/bin/sh
+touch "~nao" "#nao" "nao#" "~sim" "~sim~" "#sim#"
+mkdir "~fase~" "#fase#" fase
+cd "~fase~" && touch "~nao" "#nao" "nao#" "~sim" "~sim~" "#sim#"
+cd ../ && cd fase
+touch "~nao" "#nao" "nao#" "~sim" "~sim~" "#sim#"
+cd ..
+/bin/sh clean
+ls */*
+mv clean ../ && rm -rf *
+mv ../clean ./" > ex07/teste.sh
+echo "#!/bin/sh
+echo "1234567890123456789012345678901234567890142" > 42f
+file -m ft_magic 42f
+rm -rf 42f" > ex08/teste.sh
 #rm -rf ex{00..08}/teste.sh
