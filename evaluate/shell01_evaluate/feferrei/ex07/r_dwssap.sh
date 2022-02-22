@@ -1,2 +1,0 @@
-#!/bin/sh
-cat /etc/passwd | grep -v "^#" | awk -v begin="$FT_LINE1" -v end="$FT_LINE2" -F: 'BEGIN{FS=":"}{if ((NR > 1 && NR % 2 == 0) && (NR >= begin && NR <= end)) usuario[$1]=NR} END{for (i in usuario) print ","i}' | rev | sort -r | tr '\n' ' ' | sed 's/.\{2\}$/./'
