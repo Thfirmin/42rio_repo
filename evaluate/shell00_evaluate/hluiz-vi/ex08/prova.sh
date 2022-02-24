@@ -1,3 +1,0 @@
-echo aaaaa > test
-echo 1234567890123456789012345678901234567890142 > file_42
-echo 空空空空空 > bytfile
