@@ -1,0 +1,60 @@
+(Basecamp Shell 00)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxxhvwi0PGmXb5isUdVwmsg8
+(Basecamp Shell 01)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxxhvwi0PGmXb5isUdVwmsg8
+(Basecamp C01)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxytsXWxZx6odBJMbRktIHTs
+(Basecamp C02)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxzpalWNSNJc4wEDmfs2Mj5t
+(Basecamp C03)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxyT9xyetVAA3jPMlIpYpl5S
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxyT9xyetVAA3jPMlIpYpl5S
+(Basecamp C04)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxzlA5vk2B1xVjjGBJy7R4X4
+(Basecamp C05)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxxZbeH9b0VC-nC6QsJRw5Ah
+(Basecamp C06)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxxDlCkkCX262SI90TsllYUW
+(Basecamp C07)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxzNYF00nlmx624twFlamqLt
+(Basecamp C08)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxxMI_GiGGb2hxMcd3IwNYRy
+(Basecamp C09)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxw6n6q_i8wek6U7t7CeAXhU
+(Basecamp C10)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxw_vu1L7tOoddOsHnZQwVf7
+(Basecamp C11)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxx8sKygTdqtOPytqN7sb0Vz
+(Basecamp C12)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxwmUOmyYSaI6gD1UyfF9MSj
+(Basecamp C13)
+https://www.youtube.com/playlist?list=PLVQYiy6xNUxzusAgMiybYwkLvuMFbVat9
+=========================================================================
+https://boardgamearena.com/
+
+"Joguinhos" para exercitar raciocínio lógico e lógica de programação
+- Racha Cuca (https://rachacuca.com.br/logica/problemas/)
+- Compute It (https://compute-it.toxicode.fr/)
+
+https://www.thinkful.com/blog/why-learning-to-code-is-so-damn-hard/
+
+https://www.freecodecamp.org/news/things-i-wish-someone-had-told-me-when-i-was-learning-how-to-code-565fc9dcb329/
+
+https://www.tecnicon.com.br/blog/505-Desvendando_o_metodo_GTD_saiba_o_que_e_e_como_usa_lo_passo_a_passo_
+
+https://open.spotify.com/episode/6ZFVVtyGcxC5iT1xt1FXKm?si=de44db6247024ef2
+
+https://code.visualstudio.com/docs/datascience/jupyter-notebooks
+
+https://jupyter.org/
+
+https://linuxcommand.org/lc3_learning_the_shell.php
+
+Existe um outro chamado Screeps, mas acho que ele é voltado para JS
+Detalhe: é MMO!
+
+semana que vem na epic games vão dar de graça um jogo (while true: learn()) que ensina programação, seria legal todos darem uma olhada
+
+https://blog.unyleya.edu.br/bitbyte/mulheres-na-tecnologia/#1_Ada_Lovelace
+
+O de hoje às 17h sim.
