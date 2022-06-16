@@ -2,5 +2,5 @@
 
 ### Titles
 * PDFs
-> PDF's may have the following prototype name: (<name_of_pdf>-[<lang>].pdf)
+> PDF's may have the following prototype name: (<lang>.<origin>_<name_of_pdf>.pdf)
 
