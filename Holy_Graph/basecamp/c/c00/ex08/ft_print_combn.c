@@ -6,7 +6,7 @@
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 14:18:19 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/03/31 00:49:10 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/06/18 20:57:51 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,26 @@ void	ft_print_combn(int n)
 	int	digit[9];
 	int	arrow;
 
-	digit[0] = -1;
+	digit[0] = 0;
 	arrow = 0;
 	n --;
 	while ((digit[0] <= (9 - n)) && (n >= 0 && n <= 8))
 	{
-		digit[arrow]++;
-		while ((digit[arrow] <= ((9 - n) + arrow)))
-		{
-			if (arrow < n)
+			while (digit[arrow] <= ((9 - n) + arrow))
 			{
-				arrow ++;
-				digit[arrow] = (digit[(arrow - 1)] + 1);
+				if (n > 0)
+				{
+					arrow ++;
+					digit[arrow] = digit[arrow - 1] + 1;
+				}
+				while (arrow == n && digit[arrow] <= 9)
+				{
+					ft_putdigits(n, digit);
+					digit[arrow] ++;
+				}
 			}
-			while ((arrow == n) && (digit[arrow] <= 9))
-			{
-				ft_putdigits(n, digit);
-				digit[arrow]++;
-			}
-		}
 		arrow --;
+		digit[arrow] ++;
 	}
 }
 

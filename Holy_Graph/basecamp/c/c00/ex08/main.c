@@ -6,7 +6,7 @@
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 14:18:11 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/03/31 00:53:46 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/06/18 20:57:26 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void	ft_print_combn(int n);
 
 int	main(void)
 {
-	ft_print_combn(4);
+	ft_print_combn(2);
 	return (0);
 }
