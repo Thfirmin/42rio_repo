@@ -6,59 +6,117 @@
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 03:06:51 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/04/11 19:02:53 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/06/19 01:53:24 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
+void	ft_putstr(char *str);
+
+char	*ft_print_content(char *str);
+
+void	ft_print_hexstr(char *str, char *hex);
 
 void	ft_print_addr(void *addr, char *hex);
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	char hex[17];
-	int	count;
+	char	*str;
+	char	hex[17];
+	int		aux;
 
-	count = 0;
-	while (count <= 16)
+	aux = 0;
+	while (aux < 16)
 	{
-		if (count <= 9)
-			hex[count] = ('0' + count);
-		else if (count < 16)
-			hex[count] = ('a' + count - 10);
+		if (aux < 10)
+			hex[aux] = ('0' + aux);
 		else
-			hex[count] = '\0';
-		count ++;
+			hex[aux] = ('a' + (aux - 10));
+		aux ++;
 	}
-	ft_print_addr(addr, hex);
+	hex[aux] = '\0';
+	str = addr;
+	if (!size)
+		return (addr);
+	while (*str)
+	{
+		ft_print_addr(str, hex);
+		ft_print_hexstr(str, hex);
+		str = ft_print_content(str);
+		ft_putstr("\n");
+	}
 }
 
 void	ft_print_addr(void *addr, char *hex)
 {
-	int	addres;
-	char local[16];
-	int	count;
+	char					address[16];
+	long long unsigned int	index;
+	int						aux;
 
-	addres = &addr;
-	count = 15;
-	while ((addres != 0) && (count > 0))
+	index = (long long unsigned int) addr;
+	aux = 14;
+	address[15] = '\0';
+	while (aux >= 0)
 	{
-		local[count] = hex[(addres % 16)];
-		addres = (addres / 16);
-		count --;
+		address[aux] = hex[(index % 16)];
+		if (index != 0)
+			index = (index / 16);
+		aux --;
 	}
-	count = 0;
-	while (local[count] != '\0')
-	{
-		ft_putchar(local[count]);
-		count ++;
-	}
-	ft_putchar(':');
+	ft_putstr(address);
+	ft_putstr(":");
 }
 
-void	ft_putchar(char c)
+void	ft_print_hexstr(char *str, char *hex)
 {
-	write (1, &c, 1);
+	char	ret[42];
+	int		index;
+	int		count;
+
+	index = 0;
+	count = 0;
+	while (index < 41)
+	{
+		if ((*str != '\0') && (index % 5 != 0))
+		{
+			ret[index] = hex[((*str / 16) % 16)];
+			ret[(index + 1)] = hex[(*str % 16)];
+			index ++;
+			str ++;
+		}
+		else
+			ret[index] = ' ';
+		index ++;
+	}
+	ret[index] = '\0';
+	ft_putstr(ret);
+}
+
+char	*ft_print_content(char *str)
+{
+	char	content[17];
+	int		aux;
+
+	aux = 0;
+	while (*str != '\0' && aux < 16)
+	{
+		if (*str >= 32 && *str <= 126)
+			content[aux] = *str;
+		else
+			content[aux] = '.';
+		str ++;
+		aux ++;
+	}
+	content[aux] = '\0';
+	ft_putstr(content);
+	return (str);
+}
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+	{
+		write (1, str++, 1);
+	}
 }
