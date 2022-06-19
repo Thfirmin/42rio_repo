@@ -6,7 +6,7 @@
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 03:06:51 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/19 01:53:24 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/06/19 02:15:37 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		str = ft_print_content(str);
 		ft_putstr("\n");
 	}
+	return (addr);
 }
 
 void	ft_print_addr(void *addr, char *hex)
@@ -72,10 +73,8 @@ void	ft_print_hexstr(char *str, char *hex)
 {
 	char	ret[42];
 	int		index;
-	int		count;
 
 	index = 0;
-	count = 0;
 	while (index < 41)
 	{
 		if ((*str != '\0') && (index % 5 != 0))
