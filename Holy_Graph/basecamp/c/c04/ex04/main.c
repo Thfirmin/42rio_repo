@@ -6,7 +6,7 @@
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 01:13:43 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/04/07 21:00:31 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/07/22 23:54:08 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 {
 	char	base[42];
 
-	strcpy (base, "0123456789abcdef");
-	ft_putnbr_base(180, base);
+	strcpy (base, "01234567");
+	ft_putnbr_base(32, base);
 	return (0);
 }
