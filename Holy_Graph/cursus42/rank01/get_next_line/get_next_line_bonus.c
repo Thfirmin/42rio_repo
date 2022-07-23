@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:49:21 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/07/23 05:08:53 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/07/23 06:51:45 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*get_next_line(int fd)
 	node = backup_line(fd, list_files);
 	if (!node)
 		node = addnew_list(fd, list_files);
-	if (read(node->f_fd, 0, 0) || BUFFER_SIZE <= 0)
+	if (fd <= 0 || read(node->f_fd, 0, 0) || BUFFER_SIZE <= 0)
 	{
 		free(node -> f_str);
 		node -> f_str = (void *)0;

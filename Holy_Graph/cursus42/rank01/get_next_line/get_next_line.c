@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:49:21 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/07/15 21:40:29 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/07/23 06:50:43 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 
 	if (!str)
 		str = ft_calloc(1, 1);
-	if (read(fd, 0, 0) || BUFFER_SIZE <= 0)
+	if (fd <= 0 || read(fd, 0, 0) || BUFFER_SIZE <= 0)
 	{
 		free(str);
 		str = (void *)0;
