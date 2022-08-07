@@ -6,85 +6,74 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 01:37:06 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/14 21:26:42 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 05:17:38 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nextwrd(const char *str, char set, int start);
+static char	*ft_nextwrd(const char *str, char set);
 
-static int	ft_setlen(const char *str, char set);
+static int	ft_strlen_set(const char *str, char set);
 
 static int	ft_countwrd(const char *str, char set);
 
 char	**ft_split(char const *s, char c)
 {
-	int		count;
-	int		aux;
+	int		words;
+	char	**splitted;
+	int		i;
 	int		len;
-	int		start;
-	char	**str;
 
-	aux = -1;
-	start = 0;
-	count = ft_countwrd(s, c);
-	str = malloc(sizeof(char *) * (count + 1));
-	if (!str)
+	words = ft_countwrd(s, c);
+	splitted = ft_calloc((words + 1), sizeof(char *));
+	if (!splitted)
 		return (0);
-	while (++aux < count)
+	i = 0;
+	while (words --)
 	{
-		start = ft_nextwrd(s, c, start);
-		len = ft_setlen((s + start), c);
-		*(str + aux) = ft_substr(s, start, len);
-		start += len;
+		s = ft_nextwrd(s, c);
+		len = ft_strlen_set(s, c);
+		*(splitted + i++) = ft_substr(s, 0, len);
+		s += len;
 	}
-	*(str + aux) = (NULL);
-	return (str);
+	*(splitted + i) = (void *)0;
+	return (splitted);
 }
 
 static int	ft_countwrd(const char *str, char set)
 {
-	int	count;
+	int	words;
 
-	count = 0;
-	while (*str != '\0')
+	words = 0;
+	while (*str)
 	{
-		if (*str != set)
+		if (*str == set)
+			str++;
+		else
 		{
-			count ++;
-			while (*(str + 1) != set && *(str + 1) != '\0')
-			{
-				str ++;
-			}
+			words ++;
+			while ((*str != set) && *str)
+				str++;
 		}
-		str ++;
 	}
-	return (count);
+	return (words);
 }
 
-static int	ft_setlen(const char *str, char set)
+static int	ft_strlen_set(const char *str, char set)
 {
-	int	count;
+	int	i;
 
-	count = 0;
-	while (*str != set && *str != '\0')
-	{
-		count ++;
-		str ++;
-	}
-	return (count);
+	i = 0;
+	while ((*(str + i) != set) && *(str + i))
+		i ++;
+	return (i);
 }
 
-static int	ft_nextwrd(const char *str, char set, int start)
+static char	*ft_nextwrd(const char *str, char set)
 {
-	while (*(str + start) != '\0')
-	{
-		if (*(str + start) != set)
-		{
-			return (start);
-		}
-		start ++;
-	}
-	return (0);
+	while (*str && (*str == set))
+		str++;
+	return ((char *)str);
 }
+

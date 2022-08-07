@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 05:25:23 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/14 21:14:33 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:45:44 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
-	char	*ptr;
+	int		i;
 
-	str = malloc(ft_strlen(s1) + 1);
+	str = ft_calloc((ft_strlen(s1) + 1), sizeof(*s1));
 	if (!str)
 		return (0);
-	ptr = str;
-	while (*s1 != '\0')
-		*str++ = *s1++;
-	*str = '\0';
-	return (ptr);
+	i = 0;
+	while (*s1)
+		*(str + i++) = *s1++;
+	*(str + i) = '\0';
+	return (str);
 }

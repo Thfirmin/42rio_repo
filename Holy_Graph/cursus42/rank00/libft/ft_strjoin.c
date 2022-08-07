@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 23:22:34 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/14 21:16:55 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:49:22 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len;
 
 	len = (ft_strlen(s1) + ft_strlen(s2));
-	newstr = malloc((len + 1) * sizeof(char));
+	newstr = ft_calloc((len + 1), sizeof(char));
 	if (!newstr)
-		return ((void *)0);
+		return (0);
 	while (*s1)
 		*newstr++ = *s1++;
 	while (*s2)

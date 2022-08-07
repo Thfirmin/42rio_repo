@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 20:22:24 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/08/06 02:40:34 by thfirmin         ###   ########.fr       */
+/*   Created: 2022/07/04 23:20:23 by thfirmin          #+#    #+#             */
+/*   Updated: 2022/07/14 00:07:28 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//write a byte to n byte string
-
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-	if (!b)
-		return (0);
-	i = 0;
-	while (len--)
-		*(unsigned char *)(b + i++) = c;
-	return (b);
+	while (lst)
+	{
+		f(lst -> content);
+		lst = lst -> next;
+	}
 }

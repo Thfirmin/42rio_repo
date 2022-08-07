@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 20:22:24 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/08/06 02:40:34 by thfirmin         ###   ########.fr       */
+/*   Created: 2022/07/04 23:23:02 by thfirmin          #+#    #+#             */
+/*   Updated: 2022/08/06 23:36:19 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//write a byte to n byte string
-
-void	*ft_memset(void *b, int c, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
-	if (!b)
+	del(f(lst->content));
+	/*t_list	**newlst;
+	t_list	*newnode;
+
+	if (!f)
 		return (0);
-	i = 0;
-	while (len--)
-		*(unsigned char *)(b + i++) = c;
-	return (b);
+	while (lst)
+	{
+		newnode = ft_lstnew(f(lst -> content));
+		if (!newnode)
+		{
+			ft_lstclear(newlst, del);
+			return (0);
+		}
+		ft_lstadd_back(newlst, newnode);
+		lst = lst -> next;
+	}*/
+	return (0);
 }

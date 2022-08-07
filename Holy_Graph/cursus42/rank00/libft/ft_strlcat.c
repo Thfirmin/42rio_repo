@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:26:01 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/08 01:09:44 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:53:16 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst ++;
 		dstsize --;
 	}
-	while (dstsize >= 1)
+	while (dstsize > 1 && *src)
 	{
-		if (dstsize == 1 || *src == '\0')
-		{
-			*dst = '\0';
-			break ;
-		}
 		*dst++ = *src++;
 		dstsize --;
 	}
+	if (dstsize)
+		*dst = '\0';
 	return (t_size);
 }

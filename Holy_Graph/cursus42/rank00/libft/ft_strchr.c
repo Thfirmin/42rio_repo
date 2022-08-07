@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:25:02 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/05/27 05:10:59 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:43:32 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	int	count;
 
 	count = 0;
-	while (s[count] != '\0')
+	while (s[count])
 	{
 		if (s[count] == (char) c)
 			return ((char *) s + count);

@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:19:34 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/14 21:10:44 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:33:51 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	void	*buffer;
+	int	i;
 
 	if (!dst && !src)
 		return (0);
-	buffer = dst;
+	i = 0;
 	while (n --)
 	{	
-		*(char *) buffer ++ = *(char *) src++;
+		*(char *) (dst + i++) = *(char *) src++;
 	}
 	return (dst);
 }

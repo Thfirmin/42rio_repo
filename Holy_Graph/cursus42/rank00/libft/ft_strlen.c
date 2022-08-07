@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:35:17 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/05/15 10:05:21 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 02:56:31 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 size_t	ft_strlen(const char *str)
 {
-	unsigned int	count;
+	size_t	count;
 
 	count = 0;
-	while (str[count] != '\0')
+	while (str[count])
 		count ++;
 	return (count);
 }

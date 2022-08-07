@@ -6,7 +6,7 @@
 /*   By: thfirmin <thfirmin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:41:57 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/05/27 05:11:55 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/06 03:14:02 by thfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	count = 0;
 	lastocur = -1;
-	while (s[count] != '\0')
+	while (s[count])
 	{
 		if (s[count] == (char) c)
 			lastocur = count;
