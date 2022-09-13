@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                    :+:     :+:            */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thfirmin <thiagofirmino2001@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 21:02:18 by thfirmin          #+#    #+#             */
-/*   Updated: 2022/06/19 23:06:43 by thfirmin         ###   ########.fr       */
+/*   Updated: 2022/08/11 14:47:11 by Thiago F.    ###     ###.br              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi_base(char *str, char *base)
 	signal = 1;
 	count = 0;
 	num = 0;
-	if (ft_validation_base(base, &nbs) < 0)
+	if (ft_validation_base(base, &nbs))
 		return (0);
 	while (str[count] == '+' || str[count] == '-' || str[count] == ' ')
 	{
@@ -48,21 +48,24 @@ int	ft_validation_base(char *base, int *nbs)
 {
 	int	aux;
 
-	while (base[*nbs] != '\0')
+	if (base)
 	{
-		aux = (*nbs + 1);
-		while (base[aux] != '\0')
+		while (base[*nbs] != '\0')
 		{
-			if (base[*nbs] == base[aux])
-				return (-1);
-			if (base[*nbs] == '+' || base[*nbs] == '-')
-				return (-1);
-			aux ++;
+			aux = (*nbs + 1);
+			while (base[aux] != '\0')
+			{
+				if (base[*nbs] == base[aux])
+					return (0);
+				if (base[*nbs] == '+' || base[*nbs] == '-')
+					return (0);
+				aux ++;
+			}
+			*nbs = *nbs +1;
 		}
-		*nbs = *nbs +1;
 	}
 	if (*nbs < 2)
-		return (-1);
+		return (0);
 	else
 		return (1);
 }
